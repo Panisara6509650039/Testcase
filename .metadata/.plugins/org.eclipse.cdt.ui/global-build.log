@@ -1,0 +1,47 @@
+23:37:46 **** Rebuild of configuration Debug for project As.2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\As.2.o" "..\\src\\As.2.cpp" 
+g++ -o As.2.exe "src\\As.2.o" 
+Info: Nothing to build for AS_1
+Info: Nothing to build for As.2
+Info: Nothing to build for AS_1
+23:38:14 **** Incremental Build of configuration Debug for project As.2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\As.2.o" "..\\src\\As.2.cpp" 
+..\src\As.2.cpp:10:16: fatal error: Q2.h: No such file or directory
+ #include "Q2.h"
+                ^
+compilation terminated.
+Info: Nothing to build for AS_1
+23:47:07 **** Incremental Build of configuration Debug for project As.2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\As.2.o" "..\\src\\As.2.cpp" 
+..\src\As.2.cpp:10:16: fatal error: Q2.h: No such file or directory
+ #include "Q2.h"
+                ^
+compilation terminated.
+23:47:20 **** Incremental Build of configuration Debug for project As.2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\As.2.o" "..\\src\\As.2.cpp" 
+..\src\As.2.cpp: In function 'int main()':
+..\src\As.2.cpp:29:35: error: 'readMatrix' was not declared in this scope
+  int **oriMatrix = readMatrix(size);
+                                   ^
+..\src\As.2.cpp:30:29: error: 'printMatrix' was not declared in this scope
+  printMatrix(oriMatrix, size);
+                             ^
+..\src\As.2.cpp:31:64: error: 'isSymmetricMatrix' was not declared in this scope
+  cout << "This matrix is" << (isSymmetricMatrix(oriMatrix, size) ? " " : " NOT ")
+                                                                ^
+..\src\As.2.cpp:33:63: error: 'makeSymmetricMatrix' was not declared in this scope
+  int **uSymMatrix = makeSymmetricMatrix(oriMatrix, size, false);
+                                                               ^
+23:47:30 **** Incremental Build of configuration Debug for project As.2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\As.2.o" "..\\src\\As.2.cpp" 
+..\src\As.2.cpp:10:16: fatal error: Q2.h: No such file or directory
+ #include "Q2.h"
+                ^
+compilation terminated.
+Info: Nothing to build for AS_1
+Info: Nothing to build for AS_1

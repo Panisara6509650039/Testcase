@@ -1,0 +1,7 @@
+02:05:05 **** Incremental Build of configuration Debug for project As4_2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\mianQ4_2.o" "..\\src\\mianQ4_2.cpp" 
+g++ -o As4_2.exe "src\\CharacterCount.o" "src\\Document.o" "src\\mianQ4_2.o" 
+
+02:05:06 Build Finished. 0 errors, 0 warnings. (took 603ms)
+

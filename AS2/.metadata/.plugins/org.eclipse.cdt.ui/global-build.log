@@ -1,0 +1,15 @@
+02:03:01 **** Incremental Build of configuration Debug for project As4_2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\mianQ4_2.o" "..\\src\\mianQ4_2.cpp" 
+g++ -o As4_2.exe "src\\CharacterCount.o" "src\\Document.o" "src\\mianQ4_2.o" 
+Info: Nothing to build for As4_2
+Info: Nothing to build for As4_2
+02:05:05 **** Incremental Build of configuration Debug for project As4_2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\mianQ4_2.o" "..\\src\\mianQ4_2.cpp" 
+g++ -o As4_2.exe "src\\CharacterCount.o" "src\\Document.o" "src\\mianQ4_2.o" 
+13:30:16 **** Rebuild of configuration Debug for project As1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\As1.o" "..\\src\\As1.cpp" 
+g++ -o As1.exe "src\\As1.o" 
+Info: Nothing to build for As1

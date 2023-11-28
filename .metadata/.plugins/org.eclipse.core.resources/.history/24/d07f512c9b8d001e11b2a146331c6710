@@ -1,0 +1,5 @@
+package panisara_6509650039;
+
+public interface Istack {
+
+}

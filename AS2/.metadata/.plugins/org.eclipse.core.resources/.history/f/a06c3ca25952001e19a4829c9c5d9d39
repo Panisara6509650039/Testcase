@@ -1,0 +1,17 @@
+/*
+ * CharacterCount.h
+ *
+ *  Created on: Sep 13, 2023
+ *      Author: Asus
+ */
+
+#ifndef CHARACTERCOUNT_H_
+#define CHARACTERCOUNT_H_
+
+class CharacterCount {
+public:
+	CharacterCount();
+	virtual ~CharacterCount();
+};
+
+#endif /* CHARACTERCOUNT_H_ */

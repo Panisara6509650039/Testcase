@@ -1,0 +1,18 @@
+/*
+ * CharacterCount.cpp
+ *
+ *  Created on: Sep 13, 2023
+ *      Author: Asus
+ */
+
+#include "CharacterCount.h"
+
+CharacterCount::CharacterCount() {
+	// TODO Auto-generated constructor stub
+
+}
+
+CharacterCount::~CharacterCount() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,10 @@
+19:33:02 **** Build of configuration Default for project MyFirstCPP ****
+Info: Configuration "Default" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[\bin;\bin;\usr\bin;C:/Users/VICTUS/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.5.v20221102-0933/jre/bin/server;C:/Users/VICTUS/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.5.v20221102-0933/jre/bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\VICTUS\AppData\Local\Microsoft\WindowsApps;;C:\Users\VICTUS\Desktop]
+
+19:33:02 Build Failed. 1 errors, 0 warnings. (took 59ms)
+

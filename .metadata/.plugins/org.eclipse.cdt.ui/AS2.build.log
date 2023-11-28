@@ -1,0 +1,48 @@
+23:23:38 **** Incremental Build of configuration Debug for project AS2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\AS2.o" "..\\src\\AS2.cpp" 
+In file included from ..\src\AS2.cpp:10:0:
+..\src\Q2.h: In function 'int main()':
+..\src\Q2.h:30:35: error: 'readMatrix' was not declared in this scope
+  int **oriMatrix = readMatrix(size);
+                                   ^
+..\src\Q2.h:31:29: error: 'printMatrix' was not declared in this scope
+  printMatrix(oriMatrix, size);
+                             ^
+..\src\Q2.h:32:64: error: 'isSymmetricMatrix' was not declared in this scope
+  cout << "This matrix is" << (isSymmetricMatrix(oriMatrix, size) ? " " : " NOT ")
+                                                                ^
+..\src\Q2.h:34:63: error: 'makeSymmetricMatrix' was not declared in this scope
+  int **uSymMatrix = makeSymmetricMatrix(oriMatrix, size, false);
+                                                               ^
+..\src\AS2.cpp: In function 'void deallocate2DArr(int**, int)':
+..\src\AS2.cpp:16:6: error: redefinition of 'void deallocate2DArr(int**, int)'
+ void deallocate2DArr(int **arr, int size) {
+      ^~~~~~~~~~~~~~~
+In file included from ..\src\AS2.cpp:10:0:
+..\src\Q2.h:17:6: note: 'void deallocate2DArr(int**, int)' previously defined here
+ void deallocate2DArr(int **arr, int size) {
+      ^~~~~~~~~~~~~~~
+..\src\AS2.cpp: In function 'int main()':
+..\src\AS2.cpp:22:5: error: redefinition of 'int main()'
+ int main() {
+     ^~~~
+In file included from ..\src\AS2.cpp:10:0:
+..\src\Q2.h:23:5: note: 'int main()' previously defined here
+ int main() {
+     ^~~~
+..\src\AS2.cpp:29:35: error: 'readMatrix' was not declared in this scope
+  int **oriMatrix = readMatrix(size);
+                                   ^
+..\src\AS2.cpp:30:29: error: 'printMatrix' was not declared in this scope
+  printMatrix(oriMatrix, size);
+                             ^
+..\src\AS2.cpp:31:64: error: 'isSymmetricMatrix' was not declared in this scope
+  cout << "This matrix is" << (isSymmetricMatrix(oriMatrix, size) ? " " : " NOT ")
+                                                                ^
+..\src\AS2.cpp:33:63: error: 'makeSymmetricMatrix' was not declared in this scope
+  int **uSymMatrix = makeSymmetricMatrix(oriMatrix, size, false);
+                                                               ^
+
+23:23:38 Build Failed. 10 errors, 0 warnings. (took 260ms)
+

@@ -1,0 +1,19 @@
+23:29:27 **** Incremental Build of configuration Debug for project AS_2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\AS_2.o" "..\\src\\AS_2.cpp" 
+..\src\AS_2.cpp: In function 'int main()':
+..\src\AS_2.cpp:29:35: error: 'readMatrix' was not declared in this scope
+  int **oriMatrix = readMatrix(size);
+                                   ^
+..\src\AS_2.cpp:30:29: error: 'printMatrix' was not declared in this scope
+  printMatrix(oriMatrix, size);
+                             ^
+..\src\AS_2.cpp:31:64: error: 'isSymmetricMatrix' was not declared in this scope
+  cout << "This matrix is" << (isSymmetricMatrix(oriMatrix, size) ? " " : " NOT ")
+                                                                ^
+..\src\AS_2.cpp:33:63: error: 'makeSymmetricMatrix' was not declared in this scope
+  int **uSymMatrix = makeSymmetricMatrix(oriMatrix, size, false);
+                                                               ^
+
+23:29:28 Build Failed. 4 errors, 0 warnings. (took 257ms)
+

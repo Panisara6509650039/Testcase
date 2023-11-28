@@ -1,0 +1,99 @@
+#ifndef Q2_H_
+#define Q2_H_
+
+// สร้างฟังก์ชัน readMatrix
+int **readMatrix(int size)
+{
+    if (!(1 < size && size <= 10))
+    {
+        std::cout << "Invalid matrix size; cannot create it. \nbye";
+        exit(0);
+    }
+    int **matrix = new int *[size]; // สร้างอาร์เรย์ของ pointer ขนาด size
+    for (int i = 0; i < size; i++)
+    {
+        matrix[i] = new int[size]; // สร้างแถวของเมทริกซ์ขนาด size
+    }
+
+    // อ่านค่าจากผู้ใช้
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << "Row" << (i) << "(" << size << "elements)";
+        for (int j = 0; j < size; j++)
+        {
+            if (std::cin >> matrix[i][j])
+            {
+                // อ่านค่าสำเร็จ
+            }
+            else
+            {
+                // ถ้ามีปัญหาในการอ่าน
+                std::cout << "Invalid input. Exiting..." << std::endl;
+                // คืนค่า nullptr เพื่อระบุว่ามีปัญหาในการอ่าน
+                return nullptr;
+            }
+        }
+    }
+
+    return matrix; // คืนค่าเมทริกซ์ที่สร้าง
+}
+
+// ฟังก์ชัน makeSymmetricMatrix
+int **makeSymmetricMatrix(int **matrix, int size, bool fromLower)
+{
+    int **symmetricMatrix = new int *[size]; // สร้างเมทริกซ์ที่จะเก็บผลลัพธ์
+    for (int i = 0; i < size; i++)
+    {
+        symmetricMatrix[i] = new int[size];
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (fromLower)
+            {
+                symmetricMatrix[i][j] = matrix[i][j];
+                symmetricMatrix[j][i] = matrix[i][j];
+            }
+            else
+            {
+                symmetricMatrix[i][j] = matrix[i][j];
+                symmetricMatrix[j][i] = matrix[i][j];
+            }
+        }
+    }
+
+    return symmetricMatrix;
+}
+
+// ฟังก์ชัน PrintMatrix
+void printMatrix(int **matrix, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+// ฟังก์ชัน isSymmetricMatrix
+bool isSymmetricMatrix(int **matrix, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (matrix[i][j] != matrix[j][i])
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+#endif /* Q2_H_ */

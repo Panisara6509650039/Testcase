@@ -1,0 +1,112 @@
+#include <iostream>
+#include "Q2.h"
+#include <cstdio>
+#include <sstream>
+using namespace std;
+
+// สร้างฟังก์ชัน readMatrix
+int** readMatrix(int size) {
+    int** matrix = new int*[size]; // สร้างอาร์เรย์ของ pointer ขนาด size
+    for (int i = 0; i < size; i++) {
+        matrix[i] = new int[size]; // สร้างแถวของเมทริกซ์ขนาด size
+        for (int j = 0; j < size; j++) {
+            matrix[i][j] = 0; // กำหนดค่าเริ่มต้นให้ทุกสมาชิกเป็น 0
+        }
+    }
+
+    // อ่านค่าจากผู้ใช้
+    for (int i = 0; i < size; i++) {
+        std::cout << "Enter values for row " << (i + 1) << " (separated by space): ";
+        for (int j = 0; j < size; j++) {
+            if (std::cin >> matrix[i][j]) {
+                // อ่านค่าสำเร็จ
+            } else {
+                // ถ้ามีปัญหาในการอ่าน
+                std::cout << "Invalid input. Exiting..." << std::endl;
+                // คืนค่า nullptr เพื่อระบุว่ามีปัญหาในการอ่าน
+                return nullptr;
+            }
+        }
+    }
+
+    return matrix; // คืนค่าเมทริกซ์ที่สร้าง
+}
+// ฟังก์ชัน makeSymmetricMatrix
+int** makeSymmetricMatrix(int** matrix, int size, bool fromLower) {
+    int** symmetricMatrix = new int*[size]; // สร้างเมทริกซ์ที่จะเก็บผลลัพธ์
+    for (int i = 0; i < size; i++) {
+        symmetricMatrix[i] = new int[size];
+        for (int j = 0; j < size; j++) {
+            if (fromLower && i >= j) {
+                symmetricMatrix[i][j] = matrix[i][j];
+            } else if (!fromLower && i <= j) {
+                symmetricMatrix[i][j] = matrix[i][j];
+            } else {
+                // ส่วนที่ไม่ได้ระบุใน symmetric matrix ให้ใส่ค่า 0
+                symmetricMatrix[i][j] = 0;
+            }
+        }
+    }
+    return symmetricMatrix;
+}
+
+// ฟังก์ชัน PrintMatrix
+void printMatrix(int** matrix, int size) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+// ฟังก์ชัน isSymmetricMatrix
+bool isSymmetricMatrix(int** matrix, int size) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (matrix[i][j] != matrix[j][i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+void deallocate2DArr(int **arr, int size) {
+	for (int i = 0; i < size; i++) {
+	delete[] arr[i];
+	}
+	delete[] arr;
+}
+int main() {
+	int size;
+	cout << "Enter the size of a square matrix (>=1 and <=10): ";
+	cin >> size;
+	if (size >= 1 && size <=10){
+	fflush(stdin);
+	int **oriMatrix = readMatrix(size);
+	printMatrix(oriMatrix, size);
+	cout << "This matrix is" << (isSymmetricMatrix(oriMatrix, size) ? " " : " NOT ")
+                    << "symmetric.\n\n";
+	int **uSymMatrix = makeSymmetricMatrix(oriMatrix, size, false);
+	printMatrix(uSymMatrix, size);
+	cout << "This (fromUpper) matrix is"
+                    << (isSymmetricMatrix(uSymMatrix, size) ? " " : " NOT ")
+                    << "symmetric.\n\n";
+	int **lSymMatrix = makeSymmetricMatrix(oriMatrix, size, true);
+	printMatrix(lSymMatrix, size);
+	cout << "This (fromLower) matrix is"
+                    << (isSymmetricMatrix(lSymMatrix, size) ? " " : " NOT ")
+                    << "symmetric.\n";
+	// deallocate memory for all created arrays
+	deallocate2DArr(oriMatrix, size);
+	deallocate2DArr(uSymMatrix, size);
+	deallocate2DArr(lSymMatrix, size);
+	}
+	else if (size == 0 && size > 10){
+
+		std::cout << "Invalid matrix size; cannot create it." << std::endl;
+		std::cout << "bye!" << std::endl;
+	}
+	return 0;
+}

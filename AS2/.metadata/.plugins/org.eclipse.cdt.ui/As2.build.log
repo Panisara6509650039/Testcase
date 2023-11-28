@@ -1,0 +1,8 @@
+23:46:49 **** Incremental Build of configuration Debug for project As2 ****
+Info: Internal Builder is used for build
+g++ -o As2.exe "src\\As2.o" 
+C:/Program Files/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file As2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+
+23:46:49 Build Failed. 1 errors, 0 warnings. (took 91ms)
+

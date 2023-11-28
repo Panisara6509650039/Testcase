@@ -1,0 +1,17 @@
+/*
+ * Document.h
+ *
+ *  Created on: Sep 14, 2023
+ *      Author: Asus
+ */
+
+#ifndef DOCUMENT_H_
+#define DOCUMENT_H_
+
+class Document {
+public:
+	Document();
+	virtual ~Document();
+};
+
+#endif /* DOCUMENT_H_ */
